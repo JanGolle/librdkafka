@@ -6,7 +6,7 @@ LIBVER=		1
 
 ifneq ($(wildcard ../.git),)
 # Add librdkafka version string from git tag if this is a git checkout
-CPPFLAGS += -DLIBRDKAFKA_GIT_VERSION="\"$(shell git describe --abbrev=6 --dirty --tags 2>/dev/null)\""
+CPPFLAGS += -DLIBRDKAFKA_GIT_VERSION="\"v1.0.0-RC5\""
 endif
 
 SRCS_$(WITH_SASL_CYRUS) += rdkafka_sasl_cyrus.c
